@@ -1,0 +1,204 @@
+#$ TITLE: ELRS F4 75mm FULL
+#$ FIRMWARE_VERSION: 4.3
+#$ CATEGORY: BNF
+#$ STATUS: EXPERIMENTAL
+#$ AUTHOR: Bush
+#$ DESCRIPTION: ELRS F4 (CRAZYBEEF4SX1280) whoop 75mm FULL race setup
+
+# reset configuration to default settings
+defaults nosave
+
+# feature
+feature -AIRMODE
+
+# serial
+serial 1 2048 115200 57600 0 115200
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+#$ OPTION BEGIN (CHECKED): Modes
+
+# aux
+aux 0 0 0 1800 2100 0 0
+aux 1 13 1 1800 2100 0 0
+aux 2 26 2 1800 2100 0 0
+aux 3 28 2 1300 1700 0 0
+aux 4 35 1 1300 1700 0 0
+aux 5 36 4 1800 2100 0 0
+
+# adjrange
+adjrange 0 0 0 900 2100 29 0 0 0
+adjrange 1 0 3 900 2100 12 3 0 0
+
+#$ OPTION END
+
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665    0 5885 5905    0    0
+vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 IMD6     I CUSTOM  5732 5765 5828 5840 5866 5740    0    0
+vtxtable powerlevels 3
+vtxtable powervalues 0 1 2
+vtxtable powerlabels 25 100 200
+
+# master
+set acc_calibration = -163,3,-109,1
+set serialrx_provider = CRSF
+set blackbox_device = NONE
+set motor_pwm_protocol = DSHOT300
+set motor_poles = 12
+set vbat_max_cell_voltage = 440
+set vbat_min_cell_voltage = 340
+set vbat_warning_cell_voltage = 345
+set yaw_motors_reversed = ON
+set small_angle = 180
+set pid_process_denom = 4
+set report_cell_voltage = ON
+set rate_6pos_switch = ON
+set vtx_band = 4
+set vtx_channel = 4
+set vtx_power = 1
+set vtx_low_power_disarm = ON
+set vtx_freq = 5800
+set expresslrs_uid = 142,71,97,0,110,161
+set name = BUSH_75R1
+
+#$ OPTION BEGIN (CHECKED): OSD PAL
+
+set osd_warn_batt_not_full = OFF
+set osd_warn_batt_warning = OFF
+set osd_warn_esc_fail = OFF
+set osd_warn_core_temp = OFF
+set osd_vbat_pos = 104
+set osd_rssi_pos = 449
+set osd_link_quality_pos = 14378
+set osd_rssi_dbm_pos = 417
+set osd_tim_1_pos = 6231
+set osd_tim_2_pos = 14391
+set osd_flymode_pos = 409
+set osd_throttle_pos = 377
+set osd_vtx_channel_pos = 6593
+set osd_crosshairs_pos = 237
+set osd_ah_sbar_pos = 238
+set osd_current_pos = 391
+set osd_mah_drawn_pos = 385
+set osd_craft_name_pos = 14369
+set osd_pid_roll_pos = 4097
+set osd_pid_pitch_pos = 4129
+set osd_pid_yaw_pos = 4161
+set osd_pidrate_profile_pos = 6561
+set osd_warnings_pos = 14633
+set osd_avg_cell_voltage_pos = 14385
+set osd_disarmed_pos = 14730
+set osd_esc_tmp_pos = 439
+set osd_core_temp_pos = 6615
+set osd_stat_tim_1 = ON
+set osd_stat_max_spd = OFF
+set osd_stat_battery = ON
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
+set vcd_video_system = PAL
+
+#$ OPTION END
+
+#$ OPTION BEGIN (UNCHECKED): OSD PAL
+
+set osd_warn_batt_not_full = OFF
+set osd_warn_batt_warning = OFF
+set osd_warn_esc_fail = OFF
+set osd_warn_core_temp = OFF
+set osd_vbat_pos = 104
+set osd_rssi_pos = 449
+set osd_link_quality_pos = 14378
+set osd_rssi_dbm_pos = 417
+set osd_tim_1_pos = 6231
+set osd_tim_2_pos = 14391
+set osd_flymode_pos = 409
+set osd_throttle_pos = 377
+set osd_vtx_channel_pos = 6529
+set osd_crosshairs_pos = 237
+set osd_ah_sbar_pos = 238
+set osd_current_pos = 391
+set osd_mah_drawn_pos = 385
+set osd_craft_name_pos = 14369
+set osd_pid_roll_pos = 4097
+set osd_pid_pitch_pos = 4129
+set osd_pid_yaw_pos = 4161
+set osd_pidrate_profile_pos = 6497
+set osd_warnings_pos = 14537
+set osd_avg_cell_voltage_pos = 14385
+set osd_disarmed_pos = 14634
+set osd_esc_tmp_pos = 439
+set osd_core_temp_pos = 6552
+set osd_stat_tim_1 = ON
+set osd_stat_max_spd = OFF
+set osd_stat_battery = ON
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
+set vcd_video_system = NTSC
+
+#$ OPTION END
+
+#$ OPTION BEGIN (CHECKED): PIDs
+
+profile 0
+
+# profile 0
+set vbat_sag_compensation = 100
+set anti_gravity_gain = 10000
+set throttle_boost = 20
+set p_pitch = 68
+set i_pitch = 121
+set d_pitch = 81
+set f_pitch = 181
+set p_roll = 65
+set i_roll = 115
+set d_roll = 65
+set f_roll = 173
+set p_yaw = 150
+set i_yaw = 150
+set f_yaw = 173
+set d_min_roll = 65
+set d_min_pitch = 81
+set thrust_linear = 35
+set simplified_pids_mode = RP
+set simplified_master_multiplier = 145
+set simplified_d_gain = 150
+set simplified_dmax_gain = 0
+set simplified_pitch_d_gain = 110
+
+#$ OPTION END
+
+#$ OPTION BEGIN (CHECKED): Rates
+
+rateprofile 0
+
+# rateprofile 0
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 104
+set pitch_rc_rate = 104
+set yaw_rc_rate = 104
+set roll_srate = 53
+set pitch_srate = 53
+set yaw_srate = 53
+
+rateprofile 1
+
+# rateprofile 1
+set roll_rc_rate = 1
+set pitch_rc_rate = 1
+set yaw_rc_rate = 1
+set roll_expo = 70
+set pitch_expo = 70
+set yaw_expo = 70
+set roll_srate = 85
+set pitch_srate = 85
+set yaw_srate = 55
+
+#$ OPTION END
