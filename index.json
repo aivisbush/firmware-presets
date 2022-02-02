@@ -187,6 +187,7 @@
       "6S",
       "7 Inch",
       "7\"",
+      "75mm",
       "acro",
       "actual",
       "adjustments",
@@ -212,6 +213,7 @@
       "clean",
       "clear",
       "control",
+      "CRAZYBEEF4SX1280",
       "crossfire",
       "CRSF",
       "ctzsnooze",
@@ -370,13 +372,19 @@
   "presets": [
     {
       "fullPath": "presets/4.3/bnf/whoop_75_full.txt",
-      "hash": "8d7470e712ad885dc9bd0ede204e5d6bbdfa9078c91df59f94fa2f6e6a38f142",
+      "hash": "eda988989e2cee898ced00b2a716dcee34da2c7448a58471727112a5308d1c4c",
       "title": "ELRS F4 75mm FULL",
       "firmware_version": [
         "4.3"
       ],
       "category": "BNF",
       "status": "EXPERIMENTAL",
+      "keywords": [
+        "ELRS",
+        "whoop",
+        "75mm",
+        "CRAZYBEEF4SX1280"
+      ],
       "author": "Bush",
       "priority": 0
     },
