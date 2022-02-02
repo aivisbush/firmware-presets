@@ -69,7 +69,7 @@ set vtx_freq = 5800
 set expresslrs_uid = 142,71,97,0,110,161
 set name = BUSH_75R1
 
-#$ OPTION BEGIN (CHECKED): OSD PAL
+#$ OPTION BEGIN (CHECKED): PAL
 
 set osd_warn_batt_not_full = OFF
 set osd_warn_batt_warning = OFF
@@ -107,7 +107,7 @@ set vcd_video_system = PAL
 
 #$ OPTION END
 
-#$ OPTION BEGIN (UNCHECKED): OSD NTSC
+#$ OPTION BEGIN (UNCHECKED): NTSC
 
 set osd_warn_batt_not_full = OFF
 set osd_warn_batt_warning = OFF
