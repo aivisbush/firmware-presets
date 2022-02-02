@@ -107,7 +107,7 @@ set vcd_video_system = PAL
 
 #$ OPTION END
 
-#$ OPTION BEGIN (UNCHECKED): OSD PAL
+#$ OPTION BEGIN (UNCHECKED): OSD NTSC
 
 set osd_warn_batt_not_full = OFF
 set osd_warn_batt_warning = OFF
