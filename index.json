@@ -409,7 +409,7 @@
   "presets": [
     {
       "fullPath": "presets/4.3/bnf/whoop_75_full.txt",
-      "hash": "5fe0f36fb25c9fed5dc3e503d29af61867ddf3cf5aaaf0f3885d1b8d46a06dba",
+      "hash": "d74fb127946e20167e875f26d1755cf87217c0cbb5d25a5b800a725080ccd616",
       "title": "ELRS F4 75mm FULL",
       "firmware_version": [
         "4.3"
